@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>ZP Digital Signature</title>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/ivg.png">
+    <!--Theme Css-->
+    <link href="assets/theme/css/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+    <link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link href="assets/theme/css/metisMenu.min.css" rel="stylesheet" />
+    <link href="assets/theme/css/daterangepicker.css" rel="stylesheet" />
+    <link href="assets/theme/css/app.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Header -->
+    <div class="left-sidenav">
+        <!--Logo-->
+        <div class="brand">
+            <a onclick="onLoadPage('dashboard')" href="javascript:void(0);" class="logo">
+                <span>
+                    <img src="assets/images/ivg.png" alt="logo-small" class="logo-sm">
+                </span>
+            </a>
+        </div>
+
+        <!--Nav-->
+        <div class="menu-content h-100" data-simplebar>
+            <ul class="metismenu left-sidenav-menu">
+                <li class="menu-label mt-0">Trang chủ</li>
+
+                <li class="mb-3">
+                    <a href="javascript: void(0);"><i data-feather="file-text" class="align-self-center menu-icon"></i><span>Quản lý hợp đồng</span><span class="menu-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li id="createContractNav" onclick="onLoadPage('create-contract', 0)" class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Lập hợp đồng</a></li>
+                        <li id="contractsNav" onclick="onLoadPage('contracts')" class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Danh sách hợp đồng</a></li>
+                        <li id="contractModelNav" class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Mẫu hợp đồng</a></li>
+                        <li id="contractTypeNav" onclick="onLoadPage('type-contract')" class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Loại hợp đồng</a></li>
+                    </ul>
+                </li>
+
+                <li id="customerManagNav" class="mb-3">
+                    <a href="javascript: void(0);"><i data-feather="users" class="align-self-center menu-icon"></i><span>Quản lý khách hàng</span><span class="menu-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Thêm mới khách hàng</a></li>
+                        <li onclick="onLoadPage('customers')" class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Danh sách khách hàng</a></li>
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Nhóm khách hàng</a></li>
+                    </ul>
+                </li>
+
+                <li class="mb-3">
+                    <a href="javascript: void(0);"><i data-feather="trending-up" class="align-self-center menu-icon"></i><span>Quản lý báo cáo</span><span class="menu-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Danh sách báo cáo</a></li>
+                    </ul>
+                </li>
+
+                <li class="mb-3">
+                    <a href="javascript: void(0);"><i data-feather="info" class="align-self-center menu-icon"></i><span>Quản lý thông tin</span><span class="menu-arrow"><i class="fa-solid fa-angle-right"></i></span></a>
+                    <ul class="nav-second-level" aria-expanded="false">
+                        <li class="nav-item"><a class="nav-link" href="javascript:void(0);">&#9900 Doanh nghiệp</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="page-wrapper">
+        <div class="topbar">
+            <nav class="navbar-custom">
+                <ul class="list-unstyled topbar-nav float-end mb-0">
+                    <li class="dropdown hide-phone">
+                        <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-bs-toggle="dropdown" href="javascript:void(0);" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <i data-feather="search" class="topbar-icon"></i>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end dropdown-lg p-0">
+                            <div class="app-search-topbar">
+                                <form action="#" method="get">
+                                    <input type="search" name="search" class="from-control top-search mb-0" placeholder="Type text...">
+                                    <button type="submit"><i class="ti-search"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="dropdown notification-list">
+                        <a class="nav-link dropdown-toggle arrow-none waves-light waves-effect" data-bs-toggle="dropdown" href="javascript:void(0);" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <i data-feather="bell" class="align-self-center topbar-icon"></i>
+                            <span class="totalNews badge bg-danger rounded-pill noti-icon-badge"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end dropdown-lg pt-0">
+                            <h6 class="dropdown-item-text font-15 m-0 py-3 border-bottom d-flex justify-content-between align-items-center">
+                                Thông báo mới <span class="totalNews badge bg-primary rounded-pill"></span>
+                            </h6>
+
+                            <div style="overflow-y: scroll;" class="notification-menu" data-simplebar>
+
+                            </div>
+
+                            <a hidden href="javascript:void(0);" class="dropdown-item text-center text-primary">
+                                Xem thêm
+                            </a>
+                        </div>
+                    </li>
+
+                    <li class="dropdown hide-phone me-4">
+                        <a title="Tải app ký" class="nav-link" href="../Console App/ZPDigitalSignatureInstaller.msi" download="ZPDigitalSignatureInstaller.msi" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <i data-feather="download" class="topbar-icon"></i>
+                        </a>
+                    </li>
+
+                    <li class="dropdown">
+                        <a class="nav-link dropdown-toggle waves-effect waves-light nav-user" data-bs-toggle="dropdown" href="javascript:void(0);" role="button"
+                           aria-haspopup="false" aria-expanded="false">
+                            <img src="assets/images/user.jpg" alt="profile-user" class="rounded-circle thumb-xs" />
+                            <span class="nav-user-name hidden-sm"></span>
+                        </a>
+
+                        <div class="dropdown-menu dropdown-menu-end">
+                            <a data-bs-toggle="modal" data-bs-target="#modalChangePassword" class="dropdown-item" href="javascript:void(0);"><i data-feather="key" class="align-self-center icon-xs icon-dual me-1"></i> Đổi mật khẩu</a>
+                            <div class="dropdown-divider mb-0"></div>
+                            <a onclick="returnLogin()" class="dropdown-item" href="javascript:void(0);"><i data-feather="power" class="align-self-center icon-xs icon-dual me-1"></i> Đăng xuất</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="list-unstyled topbar-nav mb-0">
+                    <li>
+                        <button class="nav-link button-menu-mobile">
+                            <i data-feather="menu" class="align-self-center topbar-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="page-content">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="row">
+                                <div class="col">
+                                    <ol class="breadcrumb">
+                                        <li onclick="onLoadPage('dashboard')" class="breadcrumb-item">
+                                            <a href="javascript:void(0);">Trang chủ</a>
+                                        </li>
+
+                                        <li id="breadcrumbItem1" class="breadcrumb-item">
+                                            <a id="breadcrumbNameLv1" href="javascript:void(0);">Dashboard</a>
+                                        </li>
+
+                                        <li id="breadcrumbItem2" style="display: none;" class="breadcrumb-item">
+                                            <span id="breadcrumbNameLv2"></span>
+                                        </li>
+
+                                        <li id="breadcrumbItem3" style="display: none;" class="breadcrumb-item">
+                                            <span id="breadcrumbNameLv3"></span>
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <iframe id="ivg-content" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" src="app/dashboard/dashboard.html"></iframe>
+                </div>
+            </div>
+
+            <footer class="footer text-center text-sm-start">
+                &copy;
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> ZP Digital Signature
+            </footer>
+        </div>
+    </div>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div id="effBackground">
+            <span id="loaderTitle">Loading</span>
+        </div>
+    </div>
+
+    <!-- Modal change password
+    ----------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="modalChangePassword" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="bg-white modal-header justify-content-center">
+                    <h5 class="fw-bold m-0 text-black mb-2">Đổi mật khẩu</h5>
+                </div>
+
+                <div class="modal-body p-4">
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="txtUserChange" readonly placeholder="Sold code">
+                        <label class="lblInput" for="txtUserChange">Sold code</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" autocomplete="off" class="form-control" id="txtPWPresent" placeholder="Password">
+                        <label class="lblInput" for="txtPWPresent">Mật khẩu hiện tại</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" autocomplete="off" class="form-control" id="txtPWNew" placeholder="Password">
+                        <label class="lblInput" for="txtPWNew">Mật khẩu mới</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="password" autocomplete="off" class="form-control" id="txtPWNewAgain" placeholder="Confirm password">
+                        <label class="lblInput" for="txtPWNewAgain">Nhập lại mật khẩu mới</label>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-around align-items-center">
+                    <button type='button' data-bs-dismiss="modal" class="btn btn-outline-secondary btn-size__2 fw-bold">
+                        Đóng x
+                    </button>
+
+                    <button onclick="changePW()" type='button' class="btn btn-primary btn-size__2 fw-bold">
+                        Xác nhận &#10003;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Theme JS -->
+    <script src="assets/jquery/jquery-360.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/theme/js/metismenu.min.js"></script>
+    <script src="assets/theme/js/waves.js"></script>
+    <script src="assets/theme/js/simplebar.min.js"></script>
+    <script src="assets/theme/js/moment.js"></script>
+    <script src="assets/theme/js/feather.min.js"></script>
+    <script src="assets/theme/js/daterangepicker.js"></script>
+    <!-- Toastr Alert -->
+    <script src="assets/toast/toastr.min.js"></script>
+    <link href="assets/toast/toastr.min.css" rel="stylesheet" />
+    <!-- Apex Charts -->
+    <script src="assets/theme/js/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="assets/theme/js/jquery-jvectormap-us-aea-en.js"></script>
+    <!-- APP JS -->
+    <script src="assets/theme/js/app.js"></script>
+    <!-- IVG CSS -->
+    <link href="assets/css/common.css" rel="stylesheet" />
+    <!-- IVG JS -->
+    <script src="assets/js/api-url.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

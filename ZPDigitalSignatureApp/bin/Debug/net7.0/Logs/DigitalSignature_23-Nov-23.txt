@@ -1,0 +1,6 @@
+23-Nov-23 16:22:30 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+23-Nov-23 16:22:48 - [Program]: A client connected.
+23-Nov-23 16:22:49 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"96298aaa-3ed5-405c-879b-b1c3c250a3d0","FileSignID":"acfa37e2-44fb-4424-b30b-8d324f73c630","FileImageID":"f0d63357-0e4a-478d-b1fd-8a3e8ce260af","PageSign":"1","PosX":343,"PosY":78,"WidthPlace":220,"HeightPlace":120,"Reason":"thich thi ky","Contact":"","Location":""}}
+23-Nov-23 16:23:08 - [Program]: PDF signed successfully!
+23-Nov-23 16:23:09 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+23-Nov-23 16:23:49 - [Program]: A client disconnected - Message: (1001) 

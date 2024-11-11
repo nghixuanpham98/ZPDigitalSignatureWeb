@@ -1,0 +1,187 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Reset CSS-->
+    <link href="../../../assets/reset-css/normalize.css" rel="stylesheet" />
+    <!--Jquery-->
+    <script src="../../../assets/jquery/jquery-360.min.js"></script>
+    <!--Font awesome-->
+    <link href="../../../assets/fontawesome/css/all.min.css" rel="stylesheet" />
+    <script src="../../../assets/fontawesome/js/all.min.js"></script>
+    <!--Boostrap-->
+    <link href="../../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <!--JqueryUI-->
+    <link href="../../../assets/jquery-ui/jquery-ui.min-v1.13.2.css" rel="stylesheet" />
+    <script src="../../../assets/jquery-ui/jquery-ui.min-v1.13.2.js"></script>
+    <!--Alert Toastr-->
+    <link href="../../../assets/toast/toastr.min.css" rel="stylesheet" />
+    <script src="../../../assets/toast/toastr.min.js"></script>
+    <!--Selectize-->
+    <link href="../../../assets/bootstrap/css/selectize.bootstrap5.min.css" rel="stylesheet" />
+    <script src="../../../assets/bootstrap/js/selectize.js"></script>
+    <!--CSS-->
+    <link href="../../../assets/css/table.css" rel="stylesheet" />
+    <link href="../../../assets/css/common.css" rel="stylesheet" />
+    <link href="type-contract.css" rel="stylesheet" />
+    <!--PDF JS-->
+    <script src="../../../assets/pdf-js/pdf.js"></script>
+    <!--JS-->
+    <script src="../../../assets/js/common.js"></script>
+    <script src="../../../assets/js/api-url.js"></script>
+    <script src="type-contract.js"></script>
+</head>
+
+<body>
+    <!-- Table list -->
+    <div id="signList">
+        <div class="card" id="tblList">
+            <div class="card-header">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <div class="input-group">
+                            <input onchange="onLoad()" class="form-control border-end-0 border" type="search" id="txtMainSearch" placeholder="Tìm kiếm">
+                            <span class="input-group-append">
+                                <button class="btn-search btn btn-outline-secondary bg-white border-start-0 border ms-n5" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <button data-bs-toggle="modal" data-bs-target="#modalCreate" id="btnCreateNew" class="btn ivg-btn-default">Thêm mới <i class="fa-solid fa-plus"></i></button>
+                        <button id="btnDelete" class="btn ivg-btn-danger">Xóa <i class="fa-solid fa-ban"></i></button>
+                        <button hidden class="btn ivg-btn-default">Tải lên <i class="fa-solid fa-upload"></i></button>
+                        <button hidden class="btn ivg-btn-default">Tải về <i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="ivg-data-table">
+                    <table class="ivgTable">
+                        <thead id="dataHead">
+                            <tr>
+                                <th class="text-center"><input type="checkbox" class="ckAll" /></th>
+                                <th>Mã loại hợp đồng</th>
+                                <th>Tên loại hợp đồng</th>
+                                <th>Ngày tạo</th>
+                                <th>Ngày chỉnh sửa</th>
+                                <th>Ghi chú</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="dataBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--Paging-->
+                <div class="row ivg-paging mt-3">
+                    <div class="col">
+                        <span><span>Tổng</span>: <b id="totalRecords"></b> <span>bản ghi</span></span>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <span>
+                            <span class="lblPageSize"></span>
+                            <select onchange="onLoad(1)" id="pageSize">
+                                <option>25</option>
+                                <option>50</option>
+                                <option>75</option>
+                                <option>100</option>
+                            </select>
+                        </span>
+                    </div>
+
+                    <div class="col" style="text-align:right">
+                        <button id="firstPage" onclick="pageIndexClick('first')" class="btn btn-sm ivg-btn-default"><i class="fa-solid fa-angles-left"></i></button>
+                        <button id="previousPage" onclick="pageIndexClick('previous')" class="btn btn-sm ivg-btn-default"><i class="fa-solid fa-angle-left"></i></button>
+
+                        <div class="btn btn-sm ivg-btn-default disabled">
+                            <span class="lblPage"></span>
+
+                            <span>
+                                <span id="pageIndexText"></span>
+                                <input type="hidden" value="1" id="pageIndex" />
+                            </span>
+
+                            <span> / </span>
+
+                            <span>
+                                <span id="totalPagesText"></span>
+                                <input type="hidden" id="totalPages" />
+                            </span>
+                        </div>
+
+                        <button id="nextPage" onclick="pageIndexClick('next')" class="btn btn-sm ivg-btn-default"><i class="fa-solid fa-angle-right"></i></button>
+                        <button id="lastPage" onclick="pageIndexClick('last')" class="btn btn-sm ivg-btn-default"><i class="fa-solid fa-angles-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Loader -->
+    <div id="loader">
+        <div id="effBackground">
+            <span id="loaderTitle">Loading</span>
+        </div>
+    </div>
+
+
+    <!-- Modal Create Contract Type
+    ----------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="modalCreate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="fw-bold">Tạo mới</h5>
+                </div>
+
+                <div class="modal-body p-3">
+                    <div>
+                        <div class="mb-2">
+                            <span class="mb-1 fw-bold">
+                                Mã loại hợp đồng
+                                <span class="obligatory" title="Bắt buộc">*</span>
+                            </span>
+
+                            <input type="text" spellcheck="false" autocomplete="off" class="form-control signInput" id="txtCode">
+                        </div>
+
+                        <div class="mb-2">
+                            <span class="mb-1 fw-bold">
+                                Tên loại hợp đồng
+                                <span class="obligatory" title="Bắt buộc">*</span>
+                            </span>
+
+                            <input type="text" spellcheck="false" autocomplete="off" class="form-control signInput" id="txtName">
+                        </div>
+
+                        <div class="mb-2">
+                            <span class="mb-1 fw-bold">
+                                Ghi chú
+                            </span>
+
+                            <textarea id="txtNote" spellcheck="false" autocomplete="off" rows="3" class="form-control"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-around align-items-center">
+                    <button type='button' data-bs-dismiss="modal" class="btn btn-outline-secondary btn-size__2 fw-bold">
+                        Đóng x
+                    </button>
+
+                    <button onclick="createContractType()" type='button' class="btn btn-primary fw-bold btn-size__2">
+                        Xác nhận &#10003;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

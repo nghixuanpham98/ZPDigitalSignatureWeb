@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Reset CSS-->
+    <link href="../../assets/reset-css/normalize.css" rel="stylesheet" />
+    <!--Jquery-->
+    <script src="../../assets/jquery/jquery-360.min.js"></script>
+    <!--Font awesome-->
+    <link href="../../assets/fontawesome/css/all.min.css" rel="stylesheet" />
+    <script src="../../assets/fontawesome/js/all.min.js"></script>
+    <!--Boostrap-->
+    <link href="../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <!--JqueryUI-->
+    <link href="../../assets/jquery-ui/jquery-ui.min-v1.13.2.css" rel="stylesheet" />
+    <script src="../../assets/jquery-ui/jquery-ui.min-v1.13.2.js"></script>
+    <!--Alert toastr-->
+    <link href="../../assets/toast/toastr.min.css" rel="stylesheet" />
+    <script src="../../assets/toast/toastr.min.js"></script>
+    <!--Selectize-->
+    <link href="../../assets/bootstrap/css/selectize.bootstrap5.min.css" rel="stylesheet" />
+    <script src="../../assets/bootstrap/js/selectize.js"></script>
+    <!--Sweet alert-->
+    <script src="../../assets/sweat-alert/sweetalert.min.js"></script>
+    <!--CSS-->
+    <link href="../../assets/css/table.css" rel="stylesheet" />
+    <link href="../../assets/css/common.css" rel="stylesheet" />
+    <link href="contracts.css" rel="stylesheet" />
+    <!--PDF JS-->
+    <script src="../../assets/pdf-js/pdf.js"></script>
+    <!--JS-->
+    <script src="../../assets/js/common.js"></script>
+    <script src="../../assets/js/api-url.js"></script>
+    <script src="contracts.js"></script>
+</head>
+
+<body>
+    <!-- Table list -->
+    <div id="signList">
+        <div class="card" id="tblList">
+            <div class="card-header">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <div class="input-group">
+                            <input onchange="onLoad()" class="form-control border-end-0 border" type="search" id="txtMainSearch" placeholder="Tìm kiếm">
+                            <span class="input-group-append">
+                                <button class="btn-search btn btn-outline-secondary bg-white border-start-0 border ms-n5" type="button">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <button style="display: none;" id="btnCreateNew" onclick="onLoadPage('create-contract', 1)" class="btn ivg-btn-default">Thêm mới <i class="fa-solid fa-plus"></i></button>
+                        <button style="display: none;" id="btnDelete" onclick="deleteContract()" class="btn ivg-btn-danger">Xóa <i class="fa-solid fa-ban"></i></button>
+                        <button hidden class="btn ivg-btn-default">Tải lên <i class="fa-solid fa-upload"></i></button>
+                        <button onclick="downloadFile()" class="btn ivg-btn-default">Tải về <i class="fa-solid fa-download"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-body">
+                <div class="ivg-data-table">
+                    <table class="ivgTable">
+                        <thead id="dataHead">
+                            <tr>
+                                <th class="text-center"><input type="checkbox" class="ckAll" /></th>
+                                <th>Sold code</th>
+                                <th>Khách hàng</th>
+                                <th>Hợp đồng</th>
+                                <th>Loại hợp đồng</th>
+                                <th>Ghi chú</th>
+                                <th>Ngày lập</th>
+                                <th>Trạng thái</th>
+                                <th>Lý do</th>
+                                <th>Thao tác</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="dataBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!--Paging-->
+                <div class="row ivg-paging mt-3">
+                    <div class="col">
+                        <span><span>Tổng</span>: <b id="totalRecords"></b> <span>bản ghi</span></span>
+                        &nbsp;&nbsp;|&nbsp;&nbsp;
+                        <span>
+                            <span class="lblPageSize"></span>
+                            <select onchange="onLoad(1)" id="pageSize">
+                                <option>25</option>
+                                <option>50</option>
+                                <option>75</option>
+                                <option>100</option>
+                            </select>
+                        </span>
+                    </div>
+
+                    <div class="col" style="text-align:right">
+                        <button id="firstPage" onclick="pageIndexClick('first')" class="btn btn-sm ivg-btn-default"><i class="fa-solid fa-angles-left"></i></button>
+                        <button id="previousPage" onclick="pageIndexClick('previous')" class="btn btn-sm ivg-btn-default"><i class="fa-solid fa-angle-left"></i></button>
+
+                        <div class="btn btn-sm ivg-btn-default disabled">
+                            <span class="lblPage"></span>
+
+                            <span>
+                                <span id="pageIndexText"></span>
+                                <input type="hidden" value="1" id="pageIndex" />
+                            </span>
+
+                            <span> / </span>
+
+                            <span>
+                                <span id="totalPagesText"></span>
+                                <input type="hidden" id="totalPages" />
+                            </span>
+                        </div>
+
+                        <button id="nextPage" onclick="pageIndexClick('next')" class="btn btn-sm ivg-btn-default"><i class="fa-solid fa-angle-right"></i></button>
+                        <button id="lastPage" onclick="pageIndexClick('last')" class="btn btn-sm ivg-btn-default"><i class="fa-solid fa-angles-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Sign details -->
+    <div id="signDetail" class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 p-2">
+        <div class="col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3">
+            <button onclick="signContract()" class="btn ivg-btn-default">
+                <i class="fa-solid fa-circle-left"></i> Quay lại
+            </button>
+        </div>
+
+        <div class="d-flex flex-column align-items-start col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9">
+            <div id="grBtnSign" class="mb-4">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <button id="btnPlace" onclick="createPlaceSignature()" type='button' class="btn btn-primary btn-size__2 fw-bold me-4">
+                            Ký <i class="fa-solid fa-signature"></i>
+                        </button>
+
+                        <button id="btnReject" onclick="openModalReject()" type='button' class="btn btn-outline-primary btn-size__2 fw-bold me-4">
+                            Từ chối <i class="fa-solid fa-x"></i>
+                        </button>
+
+                        <button id="btnClear" onclick="clearPlaceSignature()" type='button' class="btn btn-outline-danger btn-size__2 fw-bold me-4">
+                            Hủy x
+                        </button>
+                    </div>
+
+                    <div class="d-flex align-items-center">
+                        <button id="btnSign" data-bs-toggle="modal" data-bs-target="#modalSign" type='button' class="btn btn-primary btn-size__2 fw-bold me-4">
+                            Đồng ý &#10003;
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <button id="prev" onclick="onPrevPage()">Trang trước</button>
+                    <button id="next" onclick="onNextPage()">Trang sau</button>
+                    &nbsp; &nbsp;
+                    <span>Trang: <span id="pageNumber"></span> / <span id="pageCount"></span></span>
+                </div>
+
+                <div id="blockResize" class="block-resize">
+                    <canvas class="h-100" id="the-canvas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Save value -->
+    <input type="hidden" id="deleteID" />
+    <input type="hidden" id="downloadID" />
+    <input type="hidden" id="contractID" />
+    <input type="hidden" id="contractStatus" />
+    <input type="hidden" id="fileSignID" />
+    <input type="hidden" id="rejectID" />
+    <a hidden id="downloadFile" download>click me</a>
+
+    <!-- Loader -->
+    <div id="loader">
+        <div id="effBackground">
+            <span id="loaderTitle">Loading</span>
+        </div>
+    </div>
+
+
+    <!-- Modal Confirm Sign
+    ----------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="modalSign" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="fw-bold">Thông tin ký</h5>
+                </div>
+
+                <div class="modal-body p-3">
+                    <div>
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control signInput" id="txtReason" placeholder="Nhập lý do ký">
+                            <label for="txtReason" class="lblInput">Nhập lý do ký (không dấu)</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control signInput" id="txtContact" placeholder="Nhập liên hệ">
+                            <label for="txtContact" class="lblInput">Nhập liên hệ (không dấu)</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input type="text" class="form-control signInput" id="txtLocation" placeholder="Nhập địa chỉ">
+                            <label for="txtLocation" class="lblInput">Nhập địa chỉ (không dấu)</label>
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="file" accept="image/*" class="form-control" id="txtImageFile">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-around align-items-center">
+                    <button type='button' data-bs-dismiss="modal" class="btn btn-outline-secondary btn-size__2 fw-bold">
+                        Đóng x
+                    </button>
+
+                    <button onclick="submitSign()" type='button' class="btn btn-primary fw-bold btn-size__2">
+                        Xác nhận &#10003;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Update Contract
+    ----------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="modalUpdate" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="fw-bold">Cập nhật hợp đồng</h5>
+                </div>
+
+                <div class="modal-body p-3">
+                    <div class="mb-2">
+                        <span class="mb-1 fw-bold">
+                            Tên hợp đồng
+                            <span class="obligatory" title="Bắt buộc">*</span>
+                        </span>
+
+                        <input id="contractName" type="text" class="form-control">
+                    </div>
+
+                    <div class="mb-2">
+                        <span class="mb-1 fw-bold">
+                            Loại hợp đồng
+                            <span class="obligatory" title="Bắt buộc">*</span>
+                        </span>
+
+                        <select id="contractType"></select>
+                    </div>
+
+                    <div class="mb-2">
+                        <span class="mb-1 fw-bold">
+                            Bên ký kết
+                            <span class="obligatory" title="Bắt buộc">*</span>
+                        </span>
+
+                        <select id="contractCustomer"></select>
+                    </div>
+
+                    <div class="mb-2">
+                        <span class="mb-1 fw-bold">
+                            Trạng thái
+                        </span>
+
+                        <div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="ckContractStatus" id="ckContractStatus2" value="2" checked>
+
+                                <label class="form-check-label" for="ckContractStatus2">
+                                    Nháp
+                                </label>
+                            </div>
+
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="ckContractStatus" id="ckContractStatus0" value="0">
+
+                                <label class="form-check-label" for="ckContractStatus0">
+                                    Xuất bản
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-2">
+                        <span class="mb-1 fw-bold">
+                            Ghi chú
+                        </span>
+
+                        <textarea id="contractNote" rows="2" class="form-control"></textarea>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-around align-items-center">
+                    <button type='button' data-bs-dismiss="modal" class="btn btn-outline-secondary btn-size__2 fw-bold">
+                        Đóng x
+                    </button>
+
+                    <button id="btnUpdateContract" onclick="updateContract()" type='button' class="btn btn-primary fw-bold btn-size__2">
+                        Xác nhận &#10003;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Reject Sign
+    ----------------------------------------------------------------------------------------------------->
+    <div class="modal fade" id="modalReject" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                    <h5 class="fw-bold">Từ chối</h5>
+                </div>
+
+                <div class="modal-body p-3">
+                    <div>
+                        <div class="form-floating mb-2">
+                            <textarea type="text" class="form-control" id="txtReject" placeholder="Type reject reason"></textarea>
+                            <label for="txtReject" class="lblInput">Nhập lý do từ chối</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer justify-content-around align-items-center">
+                    <button type='button' data-bs-dismiss="modal" class="btn btn-outline-secondary fw-bold btn-size__2">
+                        Đóng x
+                    </button>
+
+                    <button onclick="rejectContract()" type='button' class="btn btn-primary fw-bold btn-size__2">
+                        Xác nhận &#10003;
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- PDF -->
+    <script>
+        var pdfData = "";
+
+        // Loaded via <script> tag, create shortcut to access PDF.js exports.
+        var pdfjsLib = window['pdfjs-dist/build/pdf'];
+
+        // The workerSrc property shall be specified.
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '../../assets/pdf-js/pdf.worker.js';
+
+        var pdfDoc = null,
+            pageNum = 1,
+            pageRendering = false,
+            pageNumPending = null,
+            scale = 1,
+            canvas = document.getElementById('the-canvas'),
+            ctx = canvas.getContext('2d');
+
+        $(document).ready(function () {
+            $("#signDetail").hide();
+        });
+
+        function signContract(signID, fileSignID, name, isView, status) {
+            if (status) {
+                $("#contractStatus").val(status);
+            }
+
+            clearPlaceSignature();
+            $("#btnPlace").show();
+            $("#btnClear").hide();
+            $("#btnSign").hide();
+
+            parent.document.getElementById('breadcrumbItem3').style.display = "block";
+            parent.document.getElementById('breadcrumbNameLv3').innerHTML = name;
+
+            if (signID) {
+                if (isView === "true") {
+                    $("#grBtnSign").hide();
+                } else {
+                    $("#grBtnSign").show();
+                }
+
+                $("#rejectID").val(signID);
+                $("#contractID").val(signID);
+                $("#fileSignID").val(fileSignID);
+
+                $("#signList").hide();
+                $("#signDetail").show();
+
+                var settings = {
+                    "url": api_url + "file/" + fileSignID,
+                    "method": "GET",
+                    "timeout": 0,
+                };
+
+                $("#loader").show();
+
+                $.ajax(settings).done(function (rs) {
+                    if (rs.code == 200) {
+                        $("#loader").hide();
+                        console.log(rs);
+                        var data = rs.data;
+                        
+                        pdfData = atob(data.FileBase64);
+
+                        pdfjsLib.getDocument({ data: pdfData }).promise.then(function (pdfDoc_) {
+                            pdfDoc = pdfDoc_;
+                            document.getElementById('pageCount').textContent = pdfDoc.numPages;
+
+                            // Initial/first page rendering
+                            renderPage(pageNum);
+                        });
+                    } else {
+                        $("#loader").hide();
+                        console.log(rs);
+                    }
+                });
+            } else {
+                parent.document.getElementById('breadcrumbItem3').style.display = "none";
+                parent.document.getElementById('breadcrumbNameLv3').innerHTML = "";
+                $("#signDetail").hide();
+                $("#signList").show();
+            }
+        }
+
+        function renderPage(num) {
+            pageRendering = true;
+            // Using promise to fetch the page
+            pdfDoc.getPage(num).then(function (page) {
+                var viewport = page.getViewport({ scale: scale });
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                // Render PDF page into canvas context
+                var renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+                var renderTask = page.render(renderContext);
+
+                // Wait for rendering to finish
+                renderTask.promise.then(function () {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        // New page rendering is pending
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                });
+            });
+
+            // Update page counters
+            document.getElementById('pageNumber').textContent = num;
+        }
+
+        function queueRenderPage(num) {
+            if (pageRendering) {
+                pageNumPending = num;
+            } else {
+                renderPage(num);
+            }
+        }
+
+        function onPrevPage() {
+            if (pageNum <= 1) {
+                return;
+            }
+            pageNum--;
+            queueRenderPage(pageNum);
+        }
+
+        function onNextPage() {
+            if (pageNum >= pdfDoc.numPages) {
+                return;
+            }
+            pageNum++;
+            queueRenderPage(pageNum);
+        }
+    </script>
+</body>
+</html>

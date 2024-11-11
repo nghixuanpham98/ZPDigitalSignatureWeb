@@ -1,0 +1,94 @@
+27-Nov-23 07:56:50 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 07:57:06 - [Program]: A client connected.
+27-Nov-23 07:57:07 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"80cf4ed2-accd-4fe5-a387-f782a1ff5a8d","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 07:57:16 - [Program]: Error in function GetFileImage - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 07:57:17 - [Program]: Error in function GetFilePdf - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 07:57:56 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 07:58:13 - [Program]: A client connected.
+27-Nov-23 07:58:13 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"c478507e-fec1-4979-ac1e-b12c7d09499b","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 07:58:15 - [Program]: Error in function GetFileImage - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 07:58:16 - [Program]: Error in function GetFilePdf - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 08:00:10 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 08:00:13 - [Program]: A client connected.
+27-Nov-23 08:00:15 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"28bfcf6e-aae8-4503-b4d0-dc6149876d18","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 08:00:16 - [Program]: Error in function GetFileImage - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 08:00:16 - [Program]: Error in function GetFilePdf - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 08:11:04 - [Program]: A client connected.
+27-Nov-23 08:11:05 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"692e50e4-e2eb-4b61-aee1-7923b9e246b3","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 08:11:05 - [Program]: Error in function GetFileImage - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 09:22:54 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 09:24:17 - [Program]: A client connected.
+27-Nov-23 09:24:21 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"c1f433da-59c3-48b2-987c-fc4705f326ef","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 09:24:23 - [Program]: Error in function GetFileImage - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 09:24:23 - [Program]: Error in function GetFilePdf - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 09:24:49 - [Program]: A client connected.
+27-Nov-23 09:24:49 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"8c0e4ecd-147c-479b-becf-b9b9d28259cb","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 09:24:49 - [Program]: Error in function GetFileImage - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 09:25:48 - [Program]: Error in function GetFilePdf - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 09:25:58 - [Program]: A client connected.
+27-Nov-23 09:25:58 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"e9d4b621-10d2-4235-b8a9-66758c9a8f87","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 09:25:58 - [Program]: Error in function GetFileImage - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 09:32:00 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 09:32:05 - [Program]: A client connected.
+27-Nov-23 09:33:25 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 09:33:37 - [Program]: A client connected.
+27-Nov-23 09:33:38 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":"","IsComplete":1}}
+27-Nov-23 09:33:40 - [Program]: Error in function GetFilePdf - Message: The SSL connection could not be established, see inner exception.
+27-Nov-23 09:39:20 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 09:39:55 - [Program]: A client connected.
+27-Nov-23 09:39:56 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"0e28b8ce-27a8-4b52-90ea-128f862d4833","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 09:45:34 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 09:45:44 - [Program]: A client connected.
+27-Nov-23 09:45:45 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":"","IsComplete":1}}
+27-Nov-23 09:47:51 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 09:48:01 - [Program]: A client connected.
+27-Nov-23 09:48:02 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"73b76d64-adde-4c93-ab89-82193d88142e","FileSignID":"c4b24310-45ea-4ea0-a46d-fec20dd0e005","FileImageID":"","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":"","IsComplete":1}}
+27-Nov-23 09:48:21 - [Program]: User cancel select Certificate
+27-Nov-23 09:54:08 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 09:54:20 - [Program]: A client connected.
+27-Nov-23 09:54:20 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"737cb259-5f16-4567-ae07-36d829814eb6","FileSignID":"ee1ec27f-d3c3-4a17-be30-395dfd8435cc","FileImageID":"cd32b974-95ac-499c-b6b8-b5d2147d055e","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 09:54:27 - [Program]: PDF signed successfully!
+27-Nov-23 09:54:28 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+27-Nov-23 09:57:10 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 09:58:32 - [Program]: A client connected.
+27-Nov-23 09:58:33 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"844cc281-8b3c-41c7-abd8-1a50ba31ae40","FileSignID":"e8975974-3e09-455f-9b1d-de5b5dd0818b","FileImageID":"5c85af12-1265-42b0-b9db-71effd06da83","PageSign":"1","PosX":284,"PosY":521,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 09:58:41 - [Program]: PDF signed successfully!
+27-Nov-23 09:58:42 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+27-Nov-23 10:02:01 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 10:03:33 - [Program]: A client connected.
+27-Nov-23 10:03:34 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"d80c10a5-6aba-41e6-b7ab-9b0f87bf6c94","FileSignID":"768999b6-d6af-4ecb-b2e4-776c43c5948a","FileImageID":"858fd305-1481-47e5-bdb8-d8a1cb6ab618","PageSign":"1","PosX":180,"PosY":521,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 10:03:53 - [Program]: PDF signed successfully!
+27-Nov-23 10:03:53 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+27-Nov-23 10:04:43 - [Program]: A client connected.
+27-Nov-23 10:04:43 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"d80c10a5-6aba-41e6-b7ab-9b0f87bf6c94","FileSignID":"768999b6-d6af-4ecb-b2e4-776c43c5948a","FileImageID":"5e71cb09-92b8-4183-9b63-b79aaa08d80c","PageSign":"1","PosX":18,"PosY":569,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 10:07:29 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 10:08:49 - [Program]: A client connected.
+27-Nov-23 10:08:49 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"e7313aba-a491-4831-8e9b-6e9415f2a50d","FileSignID":"e25088bf-41c4-4030-b214-d1c8ffcdd734","FileImageID":"ed250a84-9384-4e15-bc6c-816eb8ae7b25","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"thich thi ky","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+27-Nov-23 10:09:00 - [Program]: PDF signed successfully!
+27-Nov-23 10:09:01 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+27-Nov-23 10:10:26 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 10:10:44 - [Program]: A client connected.
+27-Nov-23 10:10:44 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"e7313aba-a491-4831-8e9b-6e9415f2a50d","FileSignID":"e25088bf-41c4-4030-b214-d1c8ffcdd734","FileImageID":"42645100-3d04-4688-a9f2-0cd3feaeb800","PageSign":"1","PosX":0,"PosY":526,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsCompleted":1}}
+27-Nov-23 10:10:52 - [Program]: PDF signed successfully!
+27-Nov-23 10:10:53 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+27-Nov-23 10:11:06 - [Program]: A client disconnected - Message: (1001) 
+27-Nov-23 10:12:46 - [Program]: A client connected.
+27-Nov-23 10:12:46 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"e7313aba-a491-4831-8e9b-6e9415f2a50d","FileSignID":"e25088bf-41c4-4030-b214-d1c8ffcdd734","FileImageID":"32d3c2e0-c5ba-4f39-8935-4927bf6b7dfc","PageSign":"1","PosX":383,"PosY":531,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsCompleted":4}}
+27-Nov-23 10:12:52 - [Program]: PDF signed successfully!
+27-Nov-23 10:12:53 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+27-Nov-23 10:13:03 - [Program]: A client disconnected - Message: (1001) 
+27-Nov-23 10:57:33 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 10:59:38 - [Program]: A client connected.
+27-Nov-23 10:59:39 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"10e5a32b-ff7e-4ea2-95aa-91fded369e8d","FileSignID":"c0ef558c-f2d2-43f3-9c7a-da2fd04595cc","FileImageID":"2a5e55bc-dee0-402f-af01-c7282f7ec962","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsCompleted":1}}
+27-Nov-23 10:59:53 - [Program]: PDF signed successfully!
+27-Nov-23 10:59:55 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+27-Nov-23 11:00:06 - [Program]: A client connected.
+27-Nov-23 11:00:07 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"10e5a32b-ff7e-4ea2-95aa-91fded369e8d","FileSignID":"c0ef558c-f2d2-43f3-9c7a-da2fd04595cc","FileImageID":"","PageSign":"1","PosX":0,"PosY":516,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":"","IsCompleted":4}}
+27-Nov-23 11:00:10 - [Program]: PDF signed successfully!
+27-Nov-23 11:00:10 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+27-Nov-23 11:16:56 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 11:19:56 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+27-Nov-23 11:19:58 - [Program]: A client connected.
+27-Nov-23 11:19:59 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"04cbace1-2dbb-48e6-adf6-d07fbaae124e","FileSignID":"e468f54b-3f85-4c77-95f4-49c0f0acc910","FileImageID":"","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"nghi thich ky day","Contact":"nghi thich ky day","Location":"nghi thich ky day","IsCompleted":1}}
+27-Nov-23 11:20:09 - [Program]: PDF signed successfully!
+27-Nov-23 11:20:11 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]

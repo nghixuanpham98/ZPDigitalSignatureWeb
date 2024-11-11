@@ -1,0 +1,57 @@
+24-Nov-23 09:00:04 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 09:00:29 - [Program]: A client connected.
+24-Nov-23 09:00:30 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"f9a23970-9aa7-4985-b4ea-baffb0992178","FileSignID":"21953928-8c47-438c-b943-6b5739ba23b3","FileImageID":"01403683-2fea-474f-a23d-60e7a3d37296","PageSign":"1","PosX":330,"PosY":67,"WidthPlace":220,"HeightPlace":120,"Reason":"thich thi ky","Contact":"khong co","Location":"khong co"}}
+24-Nov-23 09:00:53 - [Program]: PDF signed successfully!
+24-Nov-23 09:00:54 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+24-Nov-23 09:01:47 - [Program]: A client disconnected - Message: (1001) 
+24-Nov-23 10:59:15 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 10:59:31 - [Program]: A client connected.
+24-Nov-23 10:59:31 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2ec2a806-fe17-4de5-94bb-dc221a37a8c4","FileSignID":"3eff4e46-7f76-4835-a1d2-6099d8dd8938","FileImageID":"5f928210-e29b-477a-b387-fe2818d47b77","PageSign":"1","PosX":265,"PosY":535,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location"}}
+24-Nov-23 10:59:51 - [Program]: PDF signed successfully!
+24-Nov-23 10:59:52 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+24-Nov-23 11:14:40 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 11:20:36 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 11:21:22 - [Program]: A client connected.
+24-Nov-23 11:21:24 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2ec2a806-fe17-4de5-94bb-dc221a37a8c4","FileSignID":"3eff4e46-7f76-4835-a1d2-6099d8dd8938","FileImageID":"97d68564-5376-4586-96f4-60e70b31c984","PageSign":"1","PosX":0,"PosY":512,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":""}}
+24-Nov-23 11:21:47 - [Program]: User cancel select Certificate
+24-Nov-23 11:22:03 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 11:22:29 - [Program]: A client connected.
+24-Nov-23 11:22:30 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2ec2a806-fe17-4de5-94bb-dc221a37a8c4","FileSignID":"3eff4e46-7f76-4835-a1d2-6099d8dd8938","FileImageID":"6160d3d9-0fe0-45ef-848f-ff798834cc95","PageSign":"1","PosX":0,"PosY":542,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":"","Status":false}}
+24-Nov-23 13:37:07 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 13:37:36 - [Program]: A client connected.
+24-Nov-23 13:37:37 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2ec2a806-fe17-4de5-94bb-dc221a37a8c4","FileSignID":"3eff4e46-7f76-4835-a1d2-6099d8dd8938","FileImageID":"18938d9a-bd6f-4807-923d-a8ef202d8f1a","PageSign":"1","PosX":0,"PosY":537,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"","Location":""}}
+24-Nov-23 13:38:04 - [Program]: User cancel select Certificate
+24-Nov-23 14:11:24 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 14:11:34 - [Program]: A client connected.
+24-Nov-23 14:11:35 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"7fc2423b-c021-4cb8-877e-ed5232ed7416","FileSignID":"70cf6f19-a9a2-4502-85d5-0d8ef151c118","FileImageID":"","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":""}}
+24-Nov-23 14:11:43 - [Program]: User cancel select Certificate
+24-Nov-23 14:11:46 - [Program]: A client disconnected - Message: (1001) 
+24-Nov-23 14:11:54 - [Program]: A client connected.
+24-Nov-23 14:11:55 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2ec2a806-fe17-4de5-94bb-dc221a37a8c4","FileSignID":"3eff4e46-7f76-4835-a1d2-6099d8dd8938","FileImageID":"","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":"","Status":false}}
+24-Nov-23 14:26:33 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 14:38:27 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 14:40:11 - [Program]: A client connected.
+24-Nov-23 14:40:12 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2ec2a806-fe17-4de5-94bb-dc221a37a8c4","FileSignID":"3eff4e46-7f76-4835-a1d2-6099d8dd8938","FileImageID":"8a1de117-c382-476e-a72e-784118c2beab","PageSign":"1","PosX":0,"PosY":540,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":true}}
+24-Nov-23 14:40:27 - [Program]: PDF signed successfully!
+24-Nov-23 14:40:28 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+24-Nov-23 14:40:38 - [Program]: A client disconnected - Message: (1001) 
+24-Nov-23 14:48:40 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 14:49:27 - [Program]: A client connected.
+24-Nov-23 14:49:29 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2ec2a806-fe17-4de5-94bb-dc221a37a8c4","FileSignID":"3eff4e46-7f76-4835-a1d2-6099d8dd8938","FileImageID":"79e354df-0426-450e-afd4-1da798966401","PageSign":"1","PosX":9,"PosY":392,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":4}}
+24-Nov-23 14:49:41 - [Program]: PDF signed successfully!
+24-Nov-23 14:49:42 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+24-Nov-23 14:49:56 - [Program]: A client disconnected - Message: (1001) 
+24-Nov-23 14:52:42 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 14:53:32 - [Program]: A client connected.
+24-Nov-23 14:53:32 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"369b98fd-4e4f-496f-9727-dcfaa253bd6e","FileSignID":"6d6d82e8-3506-4163-bad8-bfe13676f382","FileImageID":"300b44ed-79a7-47c8-8bf4-70edf15efe5c","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsComplete":1}}
+24-Nov-23 14:53:45 - [Program]: PDF signed successfully!
+24-Nov-23 14:53:46 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+24-Nov-23 14:56:22 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 14:56:35 - [Program]: A client connected.
+24-Nov-23 14:56:36 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"369b98fd-4e4f-496f-9727-dcfaa253bd6e","FileSignID":"6d6d82e8-3506-4163-bad8-bfe13676f382","FileImageID":"","PageSign":"1","PosX":97,"PosY":556,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":"","IsComplete":1}}
+24-Nov-23 14:56:45 - [Program]: PDF signed successfully!
+24-Nov-23 14:58:43 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+24-Nov-23 14:58:45 - [Program]: A client connected.
+24-Nov-23 14:58:46 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"369b98fd-4e4f-496f-9727-dcfaa253bd6e","FileSignID":"6d6d82e8-3506-4163-bad8-bfe13676f382","FileImageID":"","PageSign":"1","PosX":0,"PosY":499,"WidthPlace":220,"HeightPlace":120,"Reason":"","Contact":"","Location":"","IsComplete":1}}
+24-Nov-23 14:58:51 - [Program]: User cancel select Certificate
+24-Nov-23 14:58:52 - [Program]: A client disconnected - Message: (1001) 

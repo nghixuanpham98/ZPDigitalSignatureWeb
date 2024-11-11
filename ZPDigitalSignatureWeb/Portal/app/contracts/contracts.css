@@ -1,0 +1,25 @@
+﻿body {
+}
+
+#signDetail {
+    display: flex;
+    justify-content: space-between;
+}
+
+#blockResize {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ccc;
+    height: 794px;
+    width: 614px;
+}
+
+.block-resize__item {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 220px;
+    height: 120px;
+    cursor: move;
+    position: absolute;
+    left: 0;
+    top: 0;
+}

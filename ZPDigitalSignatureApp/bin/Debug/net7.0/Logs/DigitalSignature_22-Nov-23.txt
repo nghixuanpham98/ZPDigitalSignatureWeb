@@ -1,0 +1,10 @@
+22-Nov-23 09:00:43 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+22-Nov-23 09:01:54 - [Program]: A client connected.
+22-Nov-23 09:01:54 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"cfadfb97-3fd2-49c7-a154-72406f3a4b41","FileSignID":"d6ee854a-b948-412f-9004-a9aa0c0460f9","FileImageID":"034513c1-7529-42fd-858e-bc3402bf92ae","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location"}}
+22-Nov-23 09:02:18 - [Program]: PDF signed successfully!
+22-Nov-23 09:02:19 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+22-Nov-23 10:52:42 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+22-Nov-23 10:52:56 - [Program]: A client connected.
+22-Nov-23 10:52:57 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"87b19bee-ea30-43de-b449-ceff110f4b47","FileSignID":"61db9fac-c81e-4184-a536-255473b65701","FileImageID":"5e36ab5a-9202-4836-96cd-e9b5d5c3f55d","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location"}}
+22-Nov-23 10:53:24 - [Program]: PDF signed successfully!
+22-Nov-23 10:53:25 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]

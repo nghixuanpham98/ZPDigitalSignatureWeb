@@ -1,0 +1,31 @@
+21-Nov-23 10:31:23 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+21-Nov-23 10:32:16 - [Program]: A client connected.
+21-Nov-23 10:32:16 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"56e9efea-90e0-45ca-bc21-b5e73e2e25dd","FileSignID":"1619aed8-5d94-430b-8b9d-57b8e78cbbe8","FileImageID":"3f5ea637-5d47-449c-a594-2c332d96aadb","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","FileStatus":1}}
+21-Nov-23 10:32:18 - [Program]: Error in function DecodeBase64 - Message: Value cannot be null. (Parameter 's')
+21-Nov-23 10:32:25 - [Program]: Error in function SelectCertAndSign - Message: C:\Users\xxxqmfrman\Documents\GitHub\ZPDigitalSignatureWeb\ZPDigitalSignatureApp\bin\Debug\net7.0\/Files/pdf/1619aed8-5d94-430b-8b9d-57b8e78cbbe8.pdf not found as file or resource.
+21-Nov-23 10:49:18 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+21-Nov-23 10:49:31 - [Program]: A client connected.
+21-Nov-23 10:49:32 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"e2b3fc09-61b3-4196-aa3d-f5ce502c737c","FileSignID":"91e07b38-ef87-40a3-b70f-dc6b50c0492f","FileImageID":"3dcd6333-a718-4c52-9640-c5a2e31ab9d1","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location"}}
+21-Nov-23 10:49:34 - [Program]: Error in function GetFileImage - Message: 
+21-Nov-23 10:49:34 - [Program]: Error in function GetFilePdf - Message: 
+21-Nov-23 10:51:24 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+21-Nov-23 10:52:14 - [Program]: A client connected.
+21-Nov-23 10:52:15 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"e2b3fc09-61b3-4196-aa3d-f5ce502c737c","FileSignID":"91e07b38-ef87-40a3-b70f-dc6b50c0492f","FileImageID":"9557e7b5-f21d-4e79-be14-b2d9476a5e17","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location"}}
+21-Nov-23 10:52:36 - [Program]: PDF signed successfully!
+21-Nov-23 10:52:37 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+21-Nov-23 10:53:29 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+21-Nov-23 10:54:27 - [Program]: A client connected.
+21-Nov-23 10:54:29 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"e2b3fc09-61b3-4196-aa3d-f5ce502c737c","FileSignID":"91e07b38-ef87-40a3-b70f-dc6b50c0492f","FileImageID":"b82ad9e0-ec70-4a00-9659-4d20ada75211","PageSign":"1","PosX":0,"PosY":543,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location"}}
+21-Nov-23 10:54:57 - [Program]: PDF signed successfully!
+21-Nov-23 10:55:01 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+21-Nov-23 14:17:56 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+21-Nov-23 14:19:25 - [Program]: A client connected.
+21-Nov-23 14:19:26 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"ebae1914-e13d-4263-be32-b8da1076109c","FileSignID":"464b7fdb-3025-4c75-8a52-d0f5e21640af","FileImageID":"76bebec2-4728-4170-8fe8-105a1a2b01f0","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location"}}
+21-Nov-23 14:19:50 - [Program]: PDF signed successfully!
+21-Nov-23 14:19:51 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+21-Nov-23 16:50:49 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+21-Nov-23 16:51:09 - [Program]: A client connected.
+21-Nov-23 16:51:10 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"915f8115-12d9-4502-ac20-cbfd63f220fa","FileSignID":"48a2de6d-caf2-49eb-a704-0df349cf8444","FileImageID":"0720f931-0f2f-4fea-ae50-074b4cfa3e81","PageSign":"1","PosX":392,"PosY":672,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location"}}
+21-Nov-23 16:51:25 - [Program]: PDF signed successfully!
+21-Nov-23 16:51:26 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+21-Nov-23 16:51:37 - [Program]: A client disconnected - Message: (1001) 

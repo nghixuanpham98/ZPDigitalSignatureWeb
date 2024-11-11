@@ -1,0 +1,14 @@
+﻿body {
+}
+
+.upload-file {
+    border: 2px dashed #6374ff;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.upload-file__title {
+    color: #6374ff;
+}

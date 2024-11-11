@@ -1,0 +1,10 @@
+15-Nov-23 14:02:45 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+15-Nov-23 14:03:28 - [Program]: A client connected.
+15-Nov-23 14:03:28 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"75e32592-6913-4aef-8bb4-8d9c68c1099d","FileSignID":"4310be87-1203-4e42-9b03-fdc0190a367d","FileImageID":"4e17b1a4-953f-48a1-8db0-0754ecf6dab2","PageSign":"1","PosX":392,"PosY":529,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","FileStatus":1}}
+15-Nov-23 14:03:30 - [Program]: Error in function GetFileImage - [Code: 500, Message: Đã có lỗi xảy ra. Vui lòng thử lại sau hoặc liên hệ quản trị viên.]
+15-Nov-23 14:03:31 - [Program]: Error in function GetFilePdf - [Code: 500, Message: Đã có lỗi xảy ra. Vui lòng thử lại sau hoặc liên hệ quản trị viên.]
+15-Nov-23 14:09:04 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+15-Nov-23 14:10:04 - [Program]: A client connected.
+15-Nov-23 14:10:04 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"75e32592-6913-4aef-8bb4-8d9c68c1099d","FileSignID":"4310be87-1203-4e42-9b03-fdc0190a367d","FileImageID":"67274996-0829-4ac1-9826-6b1e4c6e8552","PageSign":"1","PosX":392,"PosY":538,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","FileStatus":1}}
+15-Nov-23 14:10:19 - [Program]: PDF signed successfully!
+15-Nov-23 14:10:21 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]

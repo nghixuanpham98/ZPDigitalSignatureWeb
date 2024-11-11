@@ -1,0 +1,17 @@
+28-Nov-23 09:56:46 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+28-Nov-23 09:57:04 - [Program]: A client connected.
+28-Nov-23 09:57:04 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2928f68c-9c42-44fd-8cc2-aa95a0a1edbd","FileSignID":"28da68fa-ac09-4fbc-8a0a-5718d70bd3e3","FileImageID":"d31ffd4d-fb98-4ea0-bdb1-5dce0194aab3","PageSign":"1","PosX":346,"PosY":507,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsCompleted":1}}
+28-Nov-23 10:01:44 - [Program]: PDF signed successfully!
+28-Nov-23 10:01:45 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+28-Nov-23 10:06:08 - [Program]: A client disconnected - Message: (1001) 
+28-Nov-23 11:12:58 - [Program]: A client connected.
+28-Nov-23 11:12:58 - [Client]: Received message from Client - Message: {"type":"sign","data":{"SignID":"2928f68c-9c42-44fd-8cc2-aa95a0a1edbd","FileSignID":"28da68fa-ac09-4fbc-8a0a-5718d70bd3e3","FileImageID":"b82e8dd6-d839-47bc-9d90-675bff09405c","PageSign":"1","PosX":34,"PosY":518,"WidthPlace":220,"HeightPlace":120,"Reason":"This is reason","Contact":"This is contact","Location":"This is location","IsCompleted":4}}
+28-Nov-23 11:13:03 - [Program]: PDF signed successfully!
+28-Nov-23 11:13:04 - [Program]: UpdateFile Success - [Code: 200, Message: Cập nhật dữ liệu thành công]
+28-Nov-23 14:06:12 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+28-Nov-23 14:13:46 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+28-Nov-23 14:16:06 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+28-Nov-23 14:17:17 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+28-Nov-23 14:21:34 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+28-Nov-23 14:22:31 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo
+28-Nov-23 14:23:10 - [Program]: Server has started, Waiting for a connection: 127.0.0.1:8098/echo

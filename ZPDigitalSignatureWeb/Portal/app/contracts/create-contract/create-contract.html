@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Reset CSS-->
+    <link href="../../../assets/reset-css/normalize.css" rel="stylesheet" />
+    <!--Jquery-->
+    <script src="../../../assets/jquery/jquery-360.min.js"></script>
+    <!--Font awesome-->
+    <link href="../../../assets/fontawesome/css/all.min.css" rel="stylesheet" />
+    <script src="../../../assets/fontawesome/js/all.min.js"></script>
+    <!--Boostrap-->
+    <link href="../../../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="../../../assets/bootstrap/js/bootstrap.min.js"></script>
+    <!--JqueryUI-->
+    <link href="../../../assets/jquery-ui/jquery-ui.min-v1.13.2.css" rel="stylesheet" />
+    <script src="../../../assets/jquery-ui/jquery-ui.min-v1.13.2.js"></script>
+    <!--Alert Toastr-->
+    <link href="../../../assets/toast/toastr.min.css" rel="stylesheet" />
+    <script src="../../../assets/toast/toastr.min.js"></script>
+    <!--Selectize-->
+    <link href="../../../assets/bootstrap/css/selectize.bootstrap5.min.css" rel="stylesheet" />
+    <script src="../../../assets/bootstrap/js/selectize.js"></script>
+    <!--CSS-->
+    <link href="../../../assets/css/table.css" rel="stylesheet" />
+    <link href="../../../assets/css/common.css" rel="stylesheet" />
+    <link href="create-contract.css" rel="stylesheet" />
+    <!--PDF JS-->
+    <script src="../../../assets/pdf-js/pdf.js"></script>
+    <!--JS-->
+    <script src="../../../assets/js/common.js"></script>
+    <script src="../../../assets/js/api-url.js"></script>
+    <script src="create-contract.js"></script>
+</head>
+
+<body>
+    <!-- Create contract info -->
+    <div class="create-contract col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h4 class="text-center upload-file__title mb-4">Thông tin hợp đồng</h4>
+
+        <div class="d-flex align-items-start justify-content-evenly col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 mb-4">
+            <div class="col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+                <div class="upload-file p-3">
+                    <h6 class="upload-file__title">
+                        Vui lòng chọn tệp để lập hợp đồng
+                        <span class="obligatory" title="Bắt buộc">*</span>
+                    </h6>
+
+                    <input onchange="uploadFile()" id="txtFile" accept="application/pdf" type="file" class="form-control mt-3 mb-3">
+
+                    <span>(Chỉ chấp nhận định dạng *.pdf và dung lượng không quá 10MB)</span>
+                </div>
+            </div>
+
+            <div class="col-7 col-sm-7 col-md-7 col-lg-7 col-xl-7">
+                <div class="mb-2">
+                    <span class="mb-1 fw-bold">
+                        Tên hợp đồng
+                        <span class="obligatory" title="Bắt buộc">*</span>
+                    </span>
+
+                    <input id="contractName" type="text" class="form-control">
+                </div>
+
+                <div class="mb-2">
+                    <span class="mb-1 fw-bold">
+                        Loại hợp đồng
+                        <span class="obligatory" title="Bắt buộc">*</span>
+                    </span>
+
+                    <select id="contractType"></select>
+                </div>
+
+                <div class="mb-2">
+                    <span class="mb-1 fw-bold">
+                        Bên ký kết
+                        <span class="obligatory" title="Bắt buộc">*</span>
+                    </span>
+
+                    <select id="contractCustomer"></select>
+                </div>
+
+                <div class="mb-2">
+                    <span class="mb-1 fw-bold">
+                        Trạng thái
+                    </span>
+
+                    <div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ckContractStatus" id="ckContractStatus1" value="2" checked>
+
+                            <label class="form-check-label" for="ckContractStatus1">
+                                Nháp
+                            </label>
+                        </div>
+
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="ckContractStatus" id="ckContractStatus2" value="0">
+
+                            <label class="form-check-label" for="ckContractStatus2">
+                                Xuất bản
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-2">
+                    <span class="mb-1 fw-bold">
+                        Ghi chú
+                    </span>
+
+                    <textarea id="contractNote" rows="3" class="form-control"></textarea>
+                </div>
+
+                <button onclick="createContractInfo()" type='button' class="btn btn-primary fw-bold btn-size__2">
+                    Xác nhận &#10003;
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" id="fileID" />
+
+    <!-- Loader -->
+    <div id="loader">
+        <div id="effBackground">
+            <span id="loaderTitle">Loading</span>
+        </div>
+    </div>
+</body>
+</html>

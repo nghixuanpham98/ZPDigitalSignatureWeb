@@ -1,0 +1,261 @@
+﻿body {
+}
+
+
+/*Iframe*/
+#ivg-content {
+    display: block;
+    border: none;
+    height: calc(100vh - 160px);
+}
+
+
+/*Font size*/
+.font-size__1 {
+    font-size: 1rem !important;
+}
+
+.font-size__1-2 {
+    font-size: 1.2rem !important;
+}
+
+.font-size__1-4 {
+    font-size: 1.4rem !important;
+}
+
+.font-size__1-6 {
+    font-size: 1.4rem !important;
+}
+
+
+/*Color status*/
+.color-status__blue {
+    color: blue !important;
+}
+
+.color-status__red {
+    color: red !important;
+}
+
+.color-status__green {
+    color: green !important;
+}
+
+
+.color-status__gray {
+    color: gray !important;
+}
+
+.color-status__yellow {
+    color: #fdb403 !important;
+}
+
+/*Table icon disabled*/
+.table-icon__disabled {
+    color: #bfbfbf !important;
+    cursor: default !important;
+}
+
+
+/*Scrollbar*/
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #c1c1c1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f1f1f1;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: #747474;
+    }
+
+
+/*Obligatory*/
+.obligatory {
+    color: red;
+    font-size: 1rem;
+    padding: 2px;
+}
+
+
+/*Button*/
+.btn-size__1 {
+    width: 140px;
+    height: 52px;
+}
+
+.btn-size__2 {
+    width: 120px;
+    height: 52px;
+}
+
+.btn-search {
+    border-bottom-left-radius: unset;
+    border-top-left-radius: unset;
+}
+
+    .btn-search:hover {
+        background-color: #394968 !important;
+    }
+
+
+/*Label of input*/
+.lblInput {
+    opacity: 0.65;
+    font-size: 13px;
+}
+
+
+/*Loader*/
+#loader {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    width: 100%;
+    background-color: #0000001c;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    height: 100%;
+}
+
+#effBackground {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100px;
+    height: 100px;
+    background: #5e54546b;
+    border: 3px solid #3c3c3c;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    font-family: sans-serif;
+    font-size: 12px;
+    color: #ffffff;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #fcac1a;
+    box-shadow: 0 0 20px rgb(0 0 0 / 50%);
+}
+
+    #effBackground:before {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: -3px;
+        width: 100%;
+        height: 100%;
+        border: 3px solid transparent;
+        border-top: 3px solid #298bb4;
+        border-right: 3px solid #298bb4;
+        border-radius: 50%;
+        animation: animateC 2s linear infinite;
+    }
+
+.spanLoading {
+    display: block;
+    position: absolute;
+    top: calc(50% - 2px);
+    left: 50%;
+    width: 50%;
+    height: 4px;
+    background: transparent;
+    transform-origin: left;
+    animation: animate 2s linear infinite;
+}
+
+    .spanLoading:before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background: #298bb4;
+        top: -6px;
+        right: -8px;
+        box-shadow: 0 0 20px #298bb4;
+    }
+
+@keyframes animateC {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(405deg);
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+    position: relative;
+    -webkit-animation-name: animatebottom;
+    -webkit-animation-duration: 1s;
+    animation-name: animatebottom;
+    animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatebottom {
+    from {
+        bottom: -100px;
+        opacity: 0
+    }
+
+    to {
+        bottom: 0;
+        opacity: 1
+    }
+}
